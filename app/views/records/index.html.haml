@@ -1,0 +1,18 @@
+= react_component 'AlertDismissable'
+= react_component 'Records', { data: @records } 
+
+#modal1.modal.fade
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button", "data-target" => "#modal1"} ×
+        %h4.modal-title Modal
+      .modal-body
+        .row
+          .col-md-12
+            %h4 Some Input
+            %p Are you serious
+      .modal-footer
+        %button.btn{ "data-dismiss" => "modal", :type => "button", "data-target" => "#modal1" } Close
+        %button.btn.btn-primary{ "data-dismiss" => "modal", :type => "button", "data-target" => "#modal1" } OK
+

@@ -1,0 +1,34 @@
+%nav.navbar.navbar-light.navbar-static-top{role: 'navigation'}
+  .container-fluid
+    .navbar-header
+      %button.navbar-toggle{type: 'button', data: {toggle: 'collapse', target: '.navbar-collapse'}}
+        %span.glyphicon.glyphicon-menu-hamburger
+      %a.navbar-brand{:href => "#", :id => "logo" }
+        %img{:alt => "Brand", :height => "20", :src => "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAMAAAC7IEhfAAAA81BMVEX///9VPnxWPXxWPXxWPXxWPXxWPXxWPXz///9hSYT6+vuFc6BXPn37+vz8+/z9/f2LeqWMe6aOfqiTg6uXiK5bQ4BZQX9iS4VdRYFdRYJfSINuWI5vWY9xXJF0YJR3Y5Z4ZZd5ZZd6Z5h9apq0qcW1qsW1q8a6sMqpnLyrn76tocCvpMGwpMJoUoprVYxeRoJjS4abjLGilLemmbrDutDFvdLPx9nX0eDa1OLb1uPd1+Td2OXe2eXh3Ofj3+nk4Orl4evp5u7u7PLv7fPx7/T08vb08/f19Pf29Pj39vn6+fuEcZ9YP35aQn/8/P1ZQH5fR4PINAOdAAAAB3RSTlMAIWWOw/P002ipnAAAAPhJREFUeF6NldWOhEAUBRvtRsfdfd3d3e3/v2ZPmGSWZNPDqScqqaSBSy4CGJbtSi2ubRkiwXRkBo6ZdJIApeEwoWMIS1JYwuZCW7hc6ApJkgrr+T/eW1V9uKXS5I5GXAjW2VAV9KFfSfgJpk+w4yXhwoqwl5AIGwp4RPgdK3XNHD2ETYiwe6nUa18f5jYSxle4vulw7/EtoCdzvqkPv3bn7M0eYbc7xFPXzqCrRCgH0Hsm/IjgTSb04W0i7EGjz+xw+wR6oZ1MnJ9TWrtToEx+4QfcZJ5X6tnhw+nhvqebdVhZUJX/oFcKvaTotUcvUnY188ue/n38AunzPPE8yg7bAAAAAElFTkSuQmCC", :width => "20"}
+      .btn-group
+        %button.btn.navbar-brand{"aria-controls" => "collapseExample", "data-target" => "#addRecord", "data-toggle" => "collapse", :type => "button"}
+          %span.glyphicon.glyphicon-plus
+      .btn-group
+        %button.btn.navbar-brand{"aria-controls" => "collapseExample", "data-target" => "#stats", "data-toggle" => "collapse", :type => "button"}
+          %span.glyphicon.glyphicon-stats
+      .btn-group
+        %button.btn.navbar-brand{"aria-controls" => "collapseExample", "data-target" => "#allData", "data-toggle" => "collapse", :type => "button"}
+          %span.glyphicon.glyphicon-stats
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li= react_component 'Timer'
+        %li.dropdown.visible-xs
+          .btn-group.btn-group-justified{ :role => "group"}
+            .btn-group
+              %button.btn.btn-light.navbar-btn{ :type => "button", "data-toggle" => "modal", :href => "#", "data-target" => "#modal1" } Sign In
+            .btn-group
+              %button.btn.btn-light.navbar-btn#signupmob{ :type => "button", "data-toggle" => "modal", :href => "#", "data-target" => "#modal1" } Sign Up
+        %li.dropdown.hidden-xs
+          .btn-group{ :role => "group"}
+            .btn-group
+              %button.btn.btn-light.navbar-btn{ :type => "button", "data-toggle" => "modal", :href => "#", "data-target" => "#modal1" } Sign Up
+            .btn-group
+              %button.btn.btn-light.navbar-btn{ :type => "button", "data-toggle" => "modal", :href => "#", "data-target" => "#modal1" } Sign In
+
+
+

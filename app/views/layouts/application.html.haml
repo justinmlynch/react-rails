@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no', name: 'viewport'}
+    %title Rails React Demo
+    %link{:href => "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic", :rel => "stylesheet"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/react-motion/0.0.3/Spring.min.js', 'data-turbolinks-track' => true 
+    = csrf_meta_tags
+  %body.top-line
+    = render 'layouts/topnav'
+    .container-fluid
+      = yield
+
+
