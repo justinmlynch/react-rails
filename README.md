@@ -6,6 +6,7 @@ quick set up:
 git clone https://github.com/justinmlynch/react-rails.git
 cd react-rails/
 bundle install
+bundle update
 rake db:migrate
 rails s
 ```
